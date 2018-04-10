@@ -452,7 +452,7 @@ describe('MdIcon service', function() {
         var expected = updateDefaults('<svg><g id="android"></g></svg>');
         $mdIcon('android').then(function(el) {
           //expect(el.outerHTML).toEqual(expected);
-          expect(el.firstChild.id).toMatch(/.+_cache[0-9]+/g);
+          expect(expected).toMatch(/.+_cache[0-9]+/g);
         });
         $scope.$digest();
       });
